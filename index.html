@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Law Firm Case File Structure App</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Law Firm Case File Structure</h1>
+        <p>Create and preview a case file folder structure for a client matter.</p>
+      </header>
+
+      <section>
+        <form>
+          <label for="case-name">Case Name</label>
+          <input id="case-name" name="caseName" type="text" placeholder="e.g. Parker v. Gentry" required />
+
+          <label for="client-name">Client Name</label>
+          <input id="client-name" name="clientName" type="text" placeholder="e.g. A. Parker" required />
+
+          <label for="matter-type">Matter Type</label>
+          <select id="matter-type" name="matterType">
+            <option value="litigation">Litigation</option>
+            <option value="real-estate">Real Estate</option>
+            <option value="corporate">Corporate</option>
+            <option value="family">Family Law</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="start-date">Start Date</label>
+          <input id="start-date" name="startDate" type="date" />
+
+          <label for="custom-folders">Custom Folder Names (comma separated)</label>
+          <input id="custom-folders" name="customFolders" type="text" placeholder="e.g. Expert Reports, Settlement" />
+
+          <button type="submit">Generate Structure</button>
+        </form>
+      </section>
+
+      <section>
+        <div id="case-summary"></div>
+        <h2>Generated Folder Structure</h2>
+        <ul id="folder-tree"></ul>
+      </section>
+    </main>
+  </body>
+</html>
